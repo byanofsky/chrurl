@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>chrurl</title>
+
+    <style type="text/css">
+      body {
+        margin: 15px;
+        min-height: 300px;
+        min-width: 500px;
+        padding-left: 10px;
+        /*white-space: nowrap;*/
+      }
+
+      h1 {
+        font-size: 20px;
+        display: inline;
+        margin-right: 10px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+  </head>
+
+  <body>
+    <form id="request-form">
+      <input type="text" name="url" value="" placeholder="url...">
+      <select name="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+      </select>
+      <textarea name="bodyInput" rows="8" cols="80" placeholder="body..."></textarea>
+      <input type="submit" name="" value="Send">
+    </form>
+    <div id="results-container">
+      Results will appear here...
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

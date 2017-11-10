@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "chrurl",
+  "description": "Send HTTP requests and preview results",
+  "version": "0.0.1",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
